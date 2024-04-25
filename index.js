@@ -17,6 +17,13 @@ app.use(express.json()); // to accept json data
   app.get("/api/get/singleSong",singleSong)
 
 
+  app.get("/", (req, res) => {
+    res.send("API is running..");
+  });
+
+
+
+
 const PORT = 4000;
 
 app.listen(
