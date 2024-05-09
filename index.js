@@ -8,13 +8,13 @@ connectDB();
 const app = express();
 app.use(bodyParser.json({ limit: '1000mb' }));
 app.use(bodyParser.urlencoded({ limit: '1000mb', extended: true }));
-app.use(cors()); // allow front api's
+app.use(cors("*")); // allow front api's
 app.use(express.json()); // to accept json data
 
 
   app.post("/api/upload/uploadSong",uploadSong);
   app.get("/api/get/fetchSong",fetchSong)
-  app.get("/api/get/singleSong",singleSong)
+  app.post("/api/get/singleSong",singleSong)
 
 
   app.get("/", (req, res) => {

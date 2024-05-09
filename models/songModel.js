@@ -16,7 +16,6 @@ const songSchema = mongoose.Schema(
     },
     songDesc: {
       type: String,
-      required: true,
     },
   },
   { timestaps: true }
